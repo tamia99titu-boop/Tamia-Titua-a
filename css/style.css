@@ -204,7 +204,7 @@ header {
     height: 230px;
     object-fit: contain;   /* ¡Cambiamos 'cover' por 'contain' para que el logo se vea completo! */
     background-color: #FFFFFF; /* Le ponemos fondo blanco limpio para que los logos no floten en la nada */
-    padding: 15px;
+    padding: 10px;
     display: block;
 }
 
