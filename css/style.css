@@ -35,7 +35,7 @@ body {
    2. Encabezado / Barra de Navegación (Superior Izquierda/Derecha)
    ========================================================================== */
 header {
-    background-color: #312530; /* Fondo oscuro refinado */
+    background-color: #312530; /* Fondo oscuro refinado de tu paleta */
     padding: 15px 0;
     position: sticky;
     top: 0;
@@ -56,8 +56,8 @@ header {
 }
 
 .logo img {
-    height: 45px;
-    width: auto;
+    height: 45px; /* Altura estilizada para no romper la barra */
+    width: auto;  /* Mantiene la proporción original de la marca sin deformarla */
     object-fit: contain;
     transition: transform 0.3s ease;
 }
@@ -70,19 +70,19 @@ header {
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 35px;
+    gap: 35px; /* Espaciado elegante entre opciones */
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #EBCDB7;
+    color: #EBCDB7; /* Color beige claro para una lectura suave */
     font-size: 1rem;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #FFFFFF;
+    color: #FFFFFF; /* Cambia a blanco puro al pasar el cursor */
 }
 
 /* ==========================================================================
@@ -97,14 +97,14 @@ header {
 
 .hero-content {
     display: flex;
-    align-items: center; /* Centrado vertical perfecto */
+    align-items: center; /* Alinea los centros horizontales de texto y foto */
     justify-content: space-between;
     gap: 60px;
     flex-wrap: wrap;
 }
 
 .hero-text {
-    flex: 1.2;
+    flex: 1.2; /* Le da un poco más de peso visual al bloque de texto */
     min-width: 300px;
 }
 
@@ -128,7 +128,7 @@ header {
     font-size: 1.05rem;
 }
 
-/* Botón reutilizable */
+/* Botón reutilizable para llamadas a la acción */
 .btn {
     display: inline-block;
     background-color: #79A3C3;
@@ -157,11 +157,11 @@ header {
 }
 
 .hero-image img {
-    width: 340px;
-    height: 340px;
+    width: 340px;  /* Tamaño calibrado para no competir con el texto */
+    height: 340px; /* Relación 1:1 exacta para el círculo perfecto */
     border-radius: 50%;
-    object-fit: cover;
-    border: 6px solid #D2E2EC;
+    object-fit: cover; /* Evita que tus facciones se estiren o deformen */
+    border: 6px solid #D2E2EC; /* Borde azul suave corporativo */
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
     transition: transform 0.4s ease;
 }
@@ -171,7 +171,7 @@ header {
 }
 
 /* ==========================================================================
-   4. Sección de Proyectos (Tarjetas Adaptables para Logos y Video)
+   4. Sección de Proyectos (Tarjetas de Fotos y Video)
    ========================================================================== */
 .projects {
     background-color: #EBCDB7;
@@ -192,35 +192,32 @@ header {
     width: 350px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
     transition: 0.3s;
-    display: flex;
-    flex-direction: column; /* Organiza la imagen/video arriba y el texto abajo */
 }
 
 .project-card:hover {
     transform: translateY(-10px);
 }
 
-/* ¡CORRECCIÓN CLAVE! Muestra el lienzo de Canva completo con tus 3 logos */
+/* Ajuste para mostrar el lienzo completo de diseño de marca con sus 3 logos */
 .project-card img {
-    width: 100% !important;
-    height: auto !important;   /* Forzamos el tamaño auto para que no se encojan los logos */
-    max-height: none !important; 
-    object-fit: contain !important; /* Mantiene la proporción original exacta */
+    width: 50%;
+    height: auto;             /* ¡La clave! Cambiamos 230px por auto para que muestre todo el largo sin encoger los logos */
+    object-fit: contain;      /* Mantiene la proporción original perfecta */
     background-color: #FFFFFF; /* Fondo blanco de soporte */
-    padding: 10px 0;           /* Espaciado interno sutil */
+    padding: 10px 0;          /* Un pequeño espacio estético arriba y abajo */
     display: block;
 }
 
-/* Estilos para que el video encaje perfectamente en su tarjeta */
+/* Estilos especiales para que el video encaje perfectamente en la tarjeta */
 .project-video {
     width: 100%;
-    height: 230px;      /* El video sí mantiene altura fija para combinar con proyectos estándar */
-    object-fit: contain;  
-    background-color: #312530; /* Fondo oscuro estilo cine */
+    height: 230px;         /* Mantiene la misma altura que las tarjetas de fotos */
+    object-fit: contain;   /* ¡La clave! Cambiamos 'cover' por 'contain' para mostrar todo el video sin recortes */
+    background-color: #312530; /* Fondo oscuro estético para rellenar si quedan franjas a los lados */
     display: block;
 }
 
-/* Soporte alternativo por si usas un iframe de YouTube */
+/* Soporte alternativo por si usas un iframe incrustado de YouTube */
 .video-container {
     position: relative;
     width: 100%;
@@ -235,8 +232,6 @@ header {
 
 .project-content {
     padding: 25px;
-    background-color: #FFFFFF;
-    margin-top: auto; /* Empuja el bloque de texto siempre al final de la tarjeta */
 }
 
 .project-content h3 {
@@ -283,10 +278,10 @@ header {
 }
 
 /* ==========================================================================
-   6. Sección de Contacto (Estructura en Tarjeta Flotante)
+   6. Sección de Contacto (Estructura en 2 Columnas y Tarjeta)
    ========================================================================== */
 .contact {
-    background-color: #EBCDB7;
+    background-color: #EBCDB7; /* Fondo beige general de la sección */
     padding: 100px 0;
 }
 
@@ -297,6 +292,7 @@ header {
     flex-wrap: wrap;
 }
 
+/* Columna de Texto Motivacional (Izquierda) */
 .contact-text {
     flex: 1;
     min-width: 300px;
@@ -314,10 +310,11 @@ header {
     font-size: 1.1rem;
 }
 
+/* Columna del Formulario - Contenedor Tarjeta Flotante (Derecha) */
 .contact-form {
     flex: 1;
     min-width: 320px;
-    background-color: #957662;
+    background-color: #957662; /* Color café oscuro para la caja contenedora */
     padding: 40px;
     border-radius: 18px;
     box-shadow: 0 10px 25px rgba(58, 33, 25, 0.15);
@@ -341,6 +338,7 @@ header {
     font-size: 0.95rem;
 }
 
+/* Inputs y Textarea estilizados con tu tono azul suave */
 .contact-form input,
 .contact-form textarea {
     padding: 14px;
@@ -348,21 +346,23 @@ header {
     border-radius: 8px;
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
-    background-color: #D2E2EC;
+    background-color: #D2E2EC; /* Azul claro para excelente contraste interno */
     color: #3A2119;
     outline: none;
     transition: 0.3s;
     width: 100%;
 }
 
+/* Animación cuando el usuario hace clic para escribir */
 .contact-form input:focus,
 .contact-form textarea:focus {
     background-color: #FFFFFF;
     box-shadow: 0 0 0 3px #79A3C3;
 }
 
+/* Botón de Enviar Mensaje */
 .btn-submit {
-    background-color: #3A2119;
+    background-color: #3A2119; /* Tono oscuro para jerarquía */
     color: #FFFFFF;
     padding: 14px;
     border: none;
@@ -376,7 +376,7 @@ header {
 }
 
 .btn-submit:hover {
-    background-color: #79A3C3;
+    background-color: #79A3C3; /* Cambio suave al azul de acento */
     transform: translateY(-2px);
 }
 
@@ -417,7 +417,7 @@ footer {
 }
 
 /* ==========================================================================
-   8. Adaptación Responsive (Móviles y Tablets)
+   8. Adaptación Responsive (Pantallas Medianas y Teléfonos Móviles)
    ========================================================================== */
 @media (max-width: 900px) {
     .hero-content,
