@@ -1,6 +1,5 @@
-/* ==========================================================================
-   1. Estilos Generales y Base
-   ========================================================================== */
+/* Estilos generales aplicados a toda la página
+*/
 * {
     margin: 0;
     padding: 0;
@@ -13,14 +12,14 @@ body {
     line-height: 1.6;
 }
 
-/* Clase reutilizable para centrar y limitar el ancho del contenido */
+/* Clase de centrado y ancho máximo general */
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Estilo reutilizable para títulos de sección */
+/* Títulos de sección estándar */
 .section-title {
     text-align: center;
     margin-bottom: 50px;
@@ -31,11 +30,10 @@ body {
     font-weight: 700;
 }
 
-/* ==========================================================================
-   2. Encabezado / Barra de Navegación (Superior Izquierda/Derecha)
-   ========================================================================== */
+/* Diseño del encabezado principal (Barra superior)
+*/
 header {
-    background-color: #312530; /* Fondo oscuro refinado de tu paleta */
+    background-color: #312530; /* Color oscuro refinado */
     padding: 15px 0;
     position: sticky;
     top: 0;
@@ -49,15 +47,14 @@ header {
     align-items: center;
 }
 
-/* Contenedor del Logo - Extremo Izquierdo */
 .logo a {
     display: flex;
     align-items: center;
 }
 
 .logo img {
-    height: 45px; /* Altura estilizada para no romper la barra */
-    width: auto;  /* Mantiene la proporción original de la marca sin deformarla */
+    height: 45px;
+    width: auto;
     object-fit: contain;
     transition: transform 0.3s ease;
 }
@@ -66,30 +63,28 @@ header {
     transform: scale(1.05);
 }
 
-/* Menú de Navegación - Extremo Derecho */
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 35px; /* Espaciado elegante entre opciones */
+    gap: 35px;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #EBCDB7; /* Color beige claro para una lectura suave */
+    color: #EBCDB7; /* Beige contrastante */
     font-size: 1rem;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #FFFFFF; /* Cambia a blanco puro al pasar el cursor */
+    color: #FFFFFF;
 }
 
-/* ==========================================================================
-   3. Sección Principal (Hero) - Foto y Presentación Balanceada
-   ========================================================================== */
+/* Sección principal Hero (Alineación y tamaño de foto corregidos)
+*/
 .hero {
-    background-color: #957662; /* Color café de fondo */
+    background-color: #957662; /* Color café */
     padding: 100px 0;
     display: flex;
     align-items: center;
@@ -97,14 +92,14 @@ header {
 
 .hero-content {
     display: flex;
-    align-items: center; /* Alinea los centros horizontales de texto y foto */
+    align-items: center; /* Alineación vertical perfecta */
     justify-content: space-between;
     gap: 60px;
     flex-wrap: wrap;
 }
 
 .hero-text {
-    flex: 1.2; /* Le da un poco más de peso visual al bloque de texto */
+    flex: 1.2;
     min-width: 300px;
 }
 
@@ -128,7 +123,7 @@ header {
     font-size: 1.05rem;
 }
 
-/* Botón reutilizable para llamadas a la acción */
+/* Botón llamativo */
 .btn {
     display: inline-block;
     background-color: #79A3C3;
@@ -147,7 +142,6 @@ header {
     opacity: 0.9;
 }
 
-/* Contenedor e Imagen de perfil circular */
 .hero-image {
     flex: 0.8;
     display: flex;
@@ -157,11 +151,11 @@ header {
 }
 
 .hero-image img {
-    width: 340px;  /* Tamaño calibrado para no competir con el texto */
-    height: 340px; /* Relación 1:1 exacta para el círculo perfecto */
+    width: 340px; /* Tamaño balanceado */
+    height: 340px; /* Proporción 1:1 circular */
     border-radius: 50%;
-    object-fit: cover; /* Evita que tus facciones se estiren o deformen */
-    border: 6px solid #D2E2EC; /* Borde azul suave corporativo */
+    object-fit: cover;
+    border: 6px solid #D2E2EC; /* Borde azul suave */
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
     transition: transform 0.4s ease;
 }
@@ -170,9 +164,8 @@ header {
     transform: scale(1.03) rotate(1deg);
 }
 
-/* ==========================================================================
-   4. Sección de Proyectos (Tarjetas de Fotos y Video)
-   ========================================================================== */
+/* Sección de Proyectos
+*/
 .projects {
     background-color: #EBCDB7;
     padding: 100px 0;
@@ -198,34 +191,11 @@ header {
     transform: translateY(-10px);
 }
 
-/* Ajuste proporcional de imágenes de proyectos */
 .project-card img {
     width: 100%;
     height: 230px;
     object-fit: cover;
     display: block;
-}
-
-/* Estilos especiales para que el video encaje perfectamente en la tarjeta */
-.project-video {
-    width: 100%;
-    height: 230px;         /* Mantiene la misma altura que las tarjetas de fotos */
-    object-fit: contain;   /* ¡La clave! Cambiamos 'cover' por 'contain' para mostrar todo el video sin recortes */
-    background-color: #312530; /* Fondo oscuro estético para rellenar si quedan franjas a los lados */
-    display: block;
-}
-
-/* Soporte alternativo por si usas un iframe incrustado de YouTube */
-.video-container {
-    position: relative;
-    width: 100%;
-    height: 230px;
-}
-
-.video-container iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
 }
 
 .project-content {
@@ -238,9 +208,8 @@ header {
     color: #3A2119;
 }
 
-/* ==========================================================================
-   5. Sección de Habilidades (Skills)
-   ========================================================================== */
+/* Sección de Habilidades (Skills)
+*/
 .skills {
     background-color: #957662;
     padding: 100px 0;
@@ -275,11 +244,10 @@ header {
     transform: scale(1.05);
 }
 
-/* ==========================================================================
-   6. Sección de Contacto (Estructura en 2 Columnas y Tarjeta)
-   ========================================================================== */
+/* Sección de Contacto (Estructura de 2 columnas + Tarjeta de formulario)
+*/
 .contact {
-    background-color: #EBCDB7; /* Fondo beige general de la sección */
+    background-color: #EBCDB7;
     padding: 100px 0;
 }
 
@@ -290,7 +258,6 @@ header {
     flex-wrap: wrap;
 }
 
-/* Columna de Texto Motivacional (Izquierda) */
 .contact-text {
     flex: 1;
     min-width: 300px;
@@ -308,11 +275,10 @@ header {
     font-size: 1.1rem;
 }
 
-/* Columna del Formulario - Contenedor Tarjeta Flotante (Derecha) */
 .contact-form {
     flex: 1;
     min-width: 320px;
-    background-color: #957662; /* Color café oscuro para la caja contenedora */
+    background-color: #957662; /* Caja contenedora estilo tarjeta */
     padding: 40px;
     border-radius: 18px;
     box-shadow: 0 10px 25px rgba(58, 33, 25, 0.15);
@@ -336,7 +302,6 @@ header {
     font-size: 0.95rem;
 }
 
-/* Inputs y Textarea estilizados con tu tono azul suave */
 .contact-form input,
 .contact-form textarea {
     padding: 14px;
@@ -344,23 +309,21 @@ header {
     border-radius: 8px;
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
-    background-color: #D2E2EC; /* Azul claro para excelente contraste interno */
+    background-color: #D2E2EC; /* Campos en azul suave */
     color: #3A2119;
     outline: none;
     transition: 0.3s;
     width: 100%;
 }
 
-/* Animación cuando el usuario hace clic para escribir */
 .contact-form input:focus,
 .contact-form textarea:focus {
     background-color: #FFFFFF;
     box-shadow: 0 0 0 3px #79A3C3;
 }
 
-/* Botón de Enviar Mensaje */
 .btn-submit {
-    background-color: #3A2119; /* Tono oscuro para jerarquía */
+    background-color: #3A2119;
     color: #FFFFFF;
     padding: 14px;
     border: none;
@@ -374,13 +337,12 @@ header {
 }
 
 .btn-submit:hover {
-    background-color: #79A3C3; /* Cambio suave al azul de acento */
+    background-color: #79A3C3;
     transform: translateY(-2px);
 }
 
-/* ==========================================================================
-   7. Pie de Página (Footer)
-   ========================================================================== */
+/* Pie de página
+*/
 footer {
     background-color: #3A2119;
     padding: 40px 0;
@@ -414,9 +376,8 @@ footer {
     color: #79A3C3;
 }
 
-/* ==========================================================================
-   8. Adaptación Responsive (Pantallas Medianas y Teléfonos Móviles)
-   ========================================================================== */
+/* Adaptación responsive (Mobile First / Media queries)
+*/
 @media (max-width: 900px) {
     .hero-content,
     .contact-container {
@@ -454,10 +415,7 @@ footer {
         gap: 15px;
     }
 
-    .hero, 
-    .projects, 
-    .skills, 
-    .contact {
+    .hero, .projects, .skills, .contact {
         padding: 60px 0;
     }
 
