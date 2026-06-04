@@ -200,7 +200,7 @@ header {
 
 /* Ajuste para mostrar el lienzo completo de diseño de marca con sus 3 logos */
 .project-card img {
-    width: 100%;
+    width: 90%;
     height: auto;             /* ¡La clave! Cambiamos 230px por auto para que muestre todo el largo sin encoger los logos */
     object-fit: contain;      /* Mantiene la proporción original perfecta */
     background-color: #FFFFFF; /* Fondo blanco de soporte */
