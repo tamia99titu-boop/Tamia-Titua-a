@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Personal - Tamia Tituaña</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-container">
+
+            <div class="logo">
+                <a href="#inicio">
+                    <img src="img/logo.png" alt="Smile Logo">
+                </a>
+            </div>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#sobre-mi">Sobre mí</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+
+        <section class="hero" id="inicio">
+            <div class="container hero-content">
+
+                <div class="hero-text">
+                    <h1>Hola, soy Tamia Tituaña</h1>
+                    <h2>Multimedia y Producción Audiovisual</h2>
+                    <p>
+                        Soy estudiante de Multimedia apasionada por la fotografía,
+                        el diseño visual y la producción audiovisual. Me gusta crear
+                        proyectos creativos que transmitan emociones y cuenten historias
+                        mediante imágenes, video y animación.
+                    </p>
+                    <a href="#proyectos" class="btn">Ver proyectos</a>
+                </div>
+
+                <div class="hero-image">
+                    <img src="img/perfil.jpeg" alt="Foto de perfil de Tamia Tituaña">
+                </div>
+
+            </div>
+        </section>
+
+        <section class="projects" id="proyectos">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Mis Proyectos</h2>
+                </div>
+
+                <div class="projects-grid">
+
+                    <article class="project-card">
+                        <img src="img/foto.jpeg" alt="Proyecto Fotografía Narrativa">
+                        <div class="project-content">
+                            <h3>Fotografía Narrativa</h3>
+                            <p>
+                                Proyecto fotográfico enfocado en transmitir emociones
+                                y mensajes sociales mediante composición y color.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <img src="img/fut.png" alt="Proyecto Diseño de Marca">
+                        <div class="project-content">
+                            <h3>Diseño de Marca</h3>
+                            <p>
+                                Desarrollo de identidad visual para una marca de regalos,
+                                utilizando tipografía moderna y colores cálidos.
+                            </p>
+                        </div>
+                    </article>
+<article class="project-card">
+    
+    <video controls muted autoplay loop playsinline class="project-video">
+        <source src="img/video.mp4" type="video/mp4">
+        Tu navegador no soporta la reproducción de este video. Revise la ruta del archivo.
+    </video>
+
+    <div class="project-content">
+        <h3>Producción Audiovisual</h3>
+        <p>
+            Creación y edición de contenido audiovisual aplicando
+            narrativa visual y técnicas de edición profesional.
+        </p>
+    </div>
+</article>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="skills" id="sobre-mi">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Habilidades</h2>
+                </div>
+
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <h3>Fotografía</h3>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Edición de Video</h3>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Diseño Gráfico</h3>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Animación Digital</h3>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contacto" class="contact">
+            <div class="container contact-container">
+                
+                <div class="contact-text">
+                    <h2>¿Tienes un proyecto en mente?</h2>
+                    <p>
+                        Estoy lista para colaborar en proyectos creativos relacionados
+                        con multimedia, fotografía y producción audiovisual.
+                        Si deseas trabajar conmigo o conocer más sobre mi trabajo,
+                        puedes enviarme un mensaje.
+                    </p>
+                </div>
+
+                <div class="contact-form">
+                    <form action="https://formspree.io/f/xojbgrpn" method="POST">
+                        <div class="form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">Enviar mensaje</button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>© 2026 Tamia Tituaña | Portafolio Multimedia</p>
+            <div class="social-links">
+                <a href="#">LinkedIn</a>
+                <a href="#">Instagram</a>
+                <a href="#">GitHub</a>
+                <a href="#">Behance</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

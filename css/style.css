@@ -1,0 +1,471 @@
+/* ==========================================================================
+   1. Estilos Generales y Base
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #3A2119;
+    line-height: 1.6;
+}
+
+/* Clase reutilizable para centrar y limitar el ancho del contenido */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilo reutilizable para títulos de sección */
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   2. Encabezado / Barra de Navegación (Superior Izquierda/Derecha)
+   ========================================================================== */
+header {
+    background-color: #312530; /* Fondo oscuro refinado de tu paleta */
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Contenedor del Logo - Extremo Izquierdo */
+.logo a {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 45px; /* Altura estilizada para no romper la barra */
+    width: auto;  /* Mantiene la proporción original de la marca sin deformarla */
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+/* Menú de Navegación - Extremo Derecho */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 35px; /* Espaciado elegante entre opciones */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #EBCDB7; /* Color beige claro para una lectura suave */
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #FFFFFF; /* Cambia a blanco puro al pasar el cursor */
+}
+
+/* ==========================================================================
+   3. Sección Principal (Hero) - Foto y Presentación Balanceada
+   ========================================================================== */
+.hero {
+    background-color: #957662; /* Color café de fondo */
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center; /* Alinea los centros horizontales de texto y foto */
+    justify-content: space-between;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    flex: 1.2; /* Le da un poco más de peso visual al bloque de texto */
+    min-width: 300px;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+}
+
+.hero-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #D2E2EC;
+    font-weight: 600;
+}
+
+.hero-text p {
+    margin-bottom: 35px;
+    color: #FFFFFF;
+    font-size: 1.05rem;
+}
+
+/* Botón reutilizable para llamadas a la acción */
+.btn {
+    display: inline-block;
+    background-color: #79A3C3;
+    color: #FFFFFF;
+    padding: 14px 32px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+/* Contenedor e Imagen de perfil circular */
+.hero-image {
+    flex: 0.8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 300px;
+}
+
+.hero-image img {
+    width: 340px;  /* Tamaño calibrado para no competir con el texto */
+    height: 340px; /* Relación 1:1 exacta para el círculo perfecto */
+    border-radius: 50%;
+    object-fit: cover; /* Evita que tus facciones se estiren o deformen */
+    border: 6px solid #D2E2EC; /* Borde azul suave corporativo */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease;
+}
+
+.hero-image img:hover {
+    transform: scale(1.03) rotate(1deg);
+}
+
+/* ==========================================================================
+   4. Sección de Proyectos (Tarjetas de Fotos y Video)
+   ========================================================================== */
+.projects {
+    background-color: #EBCDB7;
+    padding: 100px 0;
+}
+
+.projects-grid {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-card {
+    background-color: #FFFFFF;
+    border-radius: 18px;
+    overflow: hidden;
+    width: 350px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Ajuste proporcional de imágenes de proyectos */
+.project-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Estilos especiales para que el video encaje perfectamente en la tarjeta */
+.project-video {
+    width: 100%;
+    height: 230px;         /* Mantiene la misma altura que las tarjetas de fotos */
+    object-fit: contain;   /* ¡La clave! Cambiamos 'cover' por 'contain' para mostrar todo el video sin recortes */
+    background-color: #312530; /* Fondo oscuro estético para rellenar si quedan franjas a los lados */
+    display: block;
+}
+
+/* Soporte alternativo por si usas un iframe incrustado de YouTube */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 230px;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.project-content {
+    padding: 25px;
+}
+
+.project-content h3 {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    color: #3A2119;
+}
+
+/* ==========================================================================
+   5. Sección de Habilidades (Skills)
+   ========================================================================== */
+.skills {
+    background-color: #957662;
+    padding: 100px 0;
+}
+
+.skills .section-title h2 {
+    color: #FFFFFF;
+}
+
+.skills-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skill-card {
+    background-color: #D2E2EC;
+    padding: 35px 25px;
+    border-radius: 14px;
+    width: 250px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.skill-card h3 {
+    color: #3A2119;
+    font-size: 1.2rem;
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+}
+
+/* ==========================================================================
+   6. Sección de Contacto (Estructura en 2 Columnas y Tarjeta)
+   ========================================================================== */
+.contact {
+    background-color: #EBCDB7; /* Fondo beige general de la sección */
+    padding: 100px 0;
+}
+
+.contact-container {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Columna de Texto Motivacional (Izquierda) */
+.contact-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-text h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #3A2119;
+    font-weight: 700;
+}
+
+.contact-text p {
+    color: #3A2119;
+    font-size: 1.1rem;
+}
+
+/* Columna del Formulario - Contenedor Tarjeta Flotante (Derecha) */
+.contact-form {
+    flex: 1;
+    min-width: 320px;
+    background-color: #957662; /* Color café oscuro para la caja contenedora */
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(58, 33, 25, 0.15);
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contact-form label {
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+/* Inputs y Textarea estilizados con tu tono azul suave */
+.contact-form input,
+.contact-form textarea {
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    background-color: #D2E2EC; /* Azul claro para excelente contraste interno */
+    color: #3A2119;
+    outline: none;
+    transition: 0.3s;
+    width: 100%;
+}
+
+/* Animación cuando el usuario hace clic para escribir */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    background-color: #FFFFFF;
+    box-shadow: 0 0 0 3px #79A3C3;
+}
+
+/* Botón de Enviar Mensaje */
+.btn-submit {
+    background-color: #3A2119; /* Tono oscuro para jerarquía */
+    color: #FFFFFF;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #79A3C3; /* Cambio suave al azul de acento */
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   7. Pie de Página (Footer)
+   ========================================================================== */
+footer {
+    background-color: #3A2119;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-content p {
+    color: #D2E2EC;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #D2E2EC;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.social-links a:hover {
+    color: #79A3C3;
+}
+
+/* ==========================================================================
+   8. Adaptación Responsive (Pantallas Medianas y Teléfonos Móviles)
+   ========================================================================== */
+@media (max-width: 900px) {
+    .hero-content,
+    .contact-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .contact-text h2 {
+        font-size: 2.2rem;
+    }
+
+    .hero-image img {
+        width: 280px;
+        height: 280px;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero, 
+    .projects, 
+    .skills, 
+    .contact {
+        padding: 60px 0;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .section-title h2 {
+        font-size: 2rem;
+    }
+}
