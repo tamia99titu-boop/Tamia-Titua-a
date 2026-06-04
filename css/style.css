@@ -198,13 +198,13 @@ header {
     transform: translateY(-10px);
 }
 
-/* Ajuste proporcional de imágenes de proyectos */
+/* Ajuste para mostrar el lienzo completo de diseño de marca con sus 3 logos */
 .project-card img {
     width: 100%;
-    height: 230px;
-    object-fit: contain;   /* ¡Cambiamos 'cover' por 'contain' para que el logo se vea completo! */
-    background-color: #FFFFFF; /* Le ponemos fondo blanco limpio para que los logos no floten en la nada */
-    padding: 10px;
+    height: auto;             /* ¡La clave! Cambiamos 230px por auto para que muestre todo el largo sin encoger los logos */
+    object-fit: contain;      /* Mantiene la proporción original perfecta */
+    background-color: #FFFFFF; /* Fondo blanco de soporte */
+    padding: 10px 0;          /* Un pequeño espacio estético arriba y abajo */
     display: block;
 }
 
